@@ -16,25 +16,24 @@ h1 {
   font-size: large;
 }
 
-
 p {
   font-size: small;
 }
 body {
-
   margin: auto;
   padding: 0;
   max-width: 1440px;
 }
 
 header {
+padding:0 .5rem;
   display: flex;
   justify-content: space-between;
-  margin: 0 50px;
+  margin: 2px 50px;
 }
 
 #logo {
-  margin-top: 5px;
+  margin-top: 10px;
   height: 30px;
 }
 
@@ -49,11 +48,12 @@ header {
   display: flex;
   align-items: center;
   height: 30px;
+  border-top: 2px solid white;
 }
 
-.header_links a:hover{
+.header_links a:hover {
   color: var(--main-color);
-  border-top: 2px solid var(--main-color);
+  border-color: 2px solid var(--main-color);
 }
 
 #magnifyingGlass {
@@ -78,7 +78,6 @@ a {
 
 .section-title-searchBox {
   display: flex;
-
   height: 35px;
   width: fit-content;
   margin: 30px 0;
@@ -131,20 +130,20 @@ button {
   display: flex;
   width: fit-content;
   flex-wrap: wrap;
-  gap: .5rem; 
+  gap: 0.5rem;
   justify-content: center;
 }
 .section-title-btnContainer div > a {
- min-width: 130px;
+  min-width: 130px;
 }
 
-.section-title-btnContainer div > a:hover{
+.section-title-btnContainer div > a:hover {
   background-color: var(--filter-bg-color);
-
 }
 .boldText {
   font-weight: 900;
   width: fit-content;
+  margin-left: 15px;
 }
 
 .btn {
@@ -164,8 +163,6 @@ button {
   height: 15px;
   margin-right: 5px;
 }
-
-
 
 .section-title-infoBox {
   display: flex;
@@ -232,7 +229,7 @@ button {
   display: flex;
   flex-direction: column;
   width: 65%;
-  gap: 25px;
+  gap: 20px;
 }
 .hebergements-cards {
   width: 100%;
@@ -289,7 +286,6 @@ button {
   justify-content: space-between;
   align-items: center;
 }
-
 
 .populaires-cards .card {
   display: flex;
@@ -367,7 +363,7 @@ footer {
   align-self: center;
   align-items: flex-start;
   padding-left: 40px;
-width: 100%;
+  width: 100%;
   margin-top: 60px;
   display: flex;
   gap: 10rem;
@@ -448,7 +444,8 @@ footer ul {
   }
   /**** footer ****/
   footer {
-    padding: 20px;display: flex;
+    padding: 20px;
+    display: flex;
     gap: 40px;
     margin-top: 60px;
     background-color: var(--main-bg-color);
@@ -471,6 +468,9 @@ footer ul {
 /* Small devices (phones, less than 768px) */
 
 @media (max-width: 768px) {
+  body > header:nth-child(1) > div:nth-child(1) {
+    margin-bottom: 2rem;
+  }
   .main-container {
     padding: 0;
     margin: 0;
@@ -482,25 +482,34 @@ footer ul {
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    margin-bottom: 30px;
+    margin: 2rem 0;
+    width: 100%;
   }
   .header_links {
     width: 100%;
     display: flex;
-    justify-content: space-between;
-    font-size: x-large;
+    font-size: large;
+    gap: 0;
+    border-bottom: 2px;
     align-items: center;
+
   }
-  .header_links a:hover{
-    border-top: none;
+  .header_links a {
+    display: inline-flex;
+    flex: 1;
+    text-align: center;
+    justify-content: center;
+    padding-bottom: 0.7rem;
+    border-bottom: solid 2px var(--main-bg-color);
   }
-  .header_links div{
+  .header_links a:hover {
+    border-top: 0;
+    border-bottom-color: 2px solid var(--main-color);
+  }
+  .header_links div {
     display: flex;
     justify-content: center;
     width: 40%;
-   }
-  .header_links div:hover{
-    border-bottom: 2px solid var(--main-color);
   }
  
   .boldText > span {
@@ -518,11 +527,12 @@ footer ul {
   .section-title-searchBox form {
     display: flex;
     width: 100%;
+    
   }
-  .section-title-searchBox input,
-  button {
+  .section-title-searchBox input{
     width: 100%;
     border: none;
+   
   }
   .section-title-searchBox button {
     width: fit-content;
@@ -531,7 +541,7 @@ footer ul {
 
   .main-container {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
   }
   #magnifyingGlass {
     display: flex;
@@ -558,14 +568,13 @@ footer ul {
     justify-content: center;
   }
 
-
   /*** populaires ***/
   .populaires {
     display: flex;
     flex-direction: column;
     height: 700px;
   }
-  .populaires h2{
+  .populaires h2 {
     margin-left: 30px;
   }
   .populaires-cards {
@@ -599,7 +608,6 @@ footer ul {
   .hebergements-cards a {
     width: 100%;
   }
- 
 
   /**** activities ***/
   .activitiesBox {
@@ -608,13 +616,14 @@ footer ul {
     width: 95%;
     margin: 20px;
   }
-  .activities h2{
-    margin-left:30px ;
+  .activities h2 {
+    margin-left: 30px;
   }
   .activitiesBox a {
     width: 90%;
   }
   footer {
+    padding: 0;
     display: flex;
     flex-direction: column;
   }
