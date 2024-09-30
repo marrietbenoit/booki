@@ -386,6 +386,9 @@ footer ul {
 
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
+  header{
+   margin: 2rem;
+  }
   .hebergements-and-populaires {
     display: flex;
     flex-direction: column;
