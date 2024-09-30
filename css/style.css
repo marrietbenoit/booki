@@ -15,23 +15,26 @@
 h1 {
   font-size: large;
 }
+
+
 p {
   font-size: small;
 }
 body {
-  margin: 0;
+
+  margin: auto;
   padding: 0;
   max-width: 1440px;
 }
 
 header {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  margin: 50px;
+  margin: 0 50px;
 }
 
 #logo {
+  margin-top: 5px;
   height: 30px;
 }
 
@@ -48,7 +51,7 @@ header {
   height: 30px;
 }
 
-.header_links a:active {
+.header_links a:hover{
   color: var(--main-color);
   border-top: 2px solid var(--main-color);
 }
@@ -135,6 +138,10 @@ button {
  min-width: 130px;
 }
 
+.section-title-btnContainer div > a:hover{
+  background-color: var(--filter-bg-color);
+
+}
 .boldText {
   font-weight: 900;
   width: fit-content;
@@ -158,10 +165,7 @@ button {
   margin-right: 5px;
 }
 
-#blue_btn {
-  min-width: fit-content;
-  background-color: var(--filter-bg-color);
-}
+
 
 .section-title-infoBox {
   display: flex;
@@ -286,6 +290,7 @@ button {
   align-items: center;
 }
 
+
 .populaires-cards .card {
   display: flex;
   margin-top: 33px;
@@ -329,6 +334,7 @@ button {
   justify-content: center;
   flex-direction: column;
 }
+
 .activitiesBox {
   width: 100%;
   display: flex;
@@ -357,11 +363,14 @@ button {
 }
 /**** Footer *****/
 footer {
-  width: 100%;
-  padding: 20px;
+  display: flex;
+  align-self: center;
+  align-items: flex-start;
+  padding-left: 40px;
+width: 100%;
   margin-top: 60px;
   display: flex;
-  justify-content: space-between;
+  gap: 10rem;
   background-color: var(--main-bg-color);
 }
 
@@ -373,7 +382,6 @@ footer li {
 footer ul {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   padding: 0;
 }
 /* Le code ci-dessous correspond à la version responsive uniquement */
@@ -440,27 +448,22 @@ footer ul {
   }
   /**** footer ****/
   footer {
-    margin: 30px;
-    padding: 20px;
-
-    width: clamp(500px 100% 1500px);
+    padding: 20px;display: flex;
+    gap: 40px;
     margin-top: 60px;
-    display: flex;
-    justify-content: space-between;
     background-color: var(--main-bg-color);
   }
   footer h2 {
     font-size: medium;
   }
   footer li {
-    font-size: 8px;
+    font-size: 20px;
     margin-bottom: 10px;
     list-style: none;
   }
   footer ul {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     padding: 0;
   }
 }
@@ -473,9 +476,13 @@ footer ul {
     margin: 0;
     display: flex;
   }
+
   header {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
   }
   .header_links {
     width: 100%;
@@ -484,6 +491,18 @@ footer ul {
     font-size: x-large;
     align-items: center;
   }
+  .header_links a:hover{
+    border-top: none;
+  }
+  .header_links div{
+    display: flex;
+    justify-content: center;
+    width: 40%;
+   }
+  .header_links div:hover{
+    border-bottom: 2px solid var(--main-color);
+  }
+ 
   .boldText > span {
     display: none;
   }
@@ -498,6 +517,7 @@ footer ul {
   }
   .section-title-searchBox form {
     display: flex;
+    width: 100%;
   }
   .section-title-searchBox input,
   button {
@@ -511,7 +531,7 @@ footer ul {
 
   .main-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
   }
   #magnifyingGlass {
     display: flex;
@@ -523,6 +543,7 @@ footer ul {
     flex-direction: column;
     align-items: center;
   }
+
   .section-title-btnContainer {
     width: 90%;
     height: auto;
@@ -536,10 +557,16 @@ footer ul {
     display: flex;
     justify-content: center;
   }
+
+
+  /*** populaires ***/
   .populaires {
     display: flex;
     flex-direction: column;
     height: 700px;
+  }
+  .populaires h2{
+    margin-left: 30px;
   }
   .populaires-cards {
     display: flex;
@@ -563,6 +590,8 @@ footer ul {
     background-color: white;
     height: fit-content;
   }
+
+  /*** hebergements ***/
   .hebergements-cards {
     display: flex;
     flex-direction: column;
@@ -570,12 +599,17 @@ footer ul {
   .hebergements-cards a {
     width: 100%;
   }
+ 
 
+  /**** activities ***/
   .activitiesBox {
     display: flex;
     flex-direction: column;
     width: 95%;
     margin: 20px;
+  }
+  .activities h2{
+    margin-left:30px ;
   }
   .activitiesBox a {
     width: 90%;
@@ -583,9 +617,6 @@ footer ul {
   footer {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    margin: 0;
-    padding: 0;
   }
   footer h2 {
     padding-left: 20px;
