@@ -29,11 +29,11 @@ header {
 
   display: flex;
   justify-content: space-between;
-  margin: 2px 70px;
+  margin:0 70px;
 }
 
 #logo {
-  margin-top: 10px;
+  margin-top: 12px;
   height: 30px;
 }
 
@@ -526,22 +526,30 @@ footer ul {
     display: flex;
     justify-content: space-between;
     width: 90%;
+    height: 40px;
+    border-radius: 25px;
   }
   .section-title-searchBox form {
     display: flex;
     width: 100%;
-    
+  }
+  #locationDotPic {
+    height: 40px;
+    width: 50px;
   }
   .section-title-searchBox input{
     width: 100%;
     border: none;
-   
   }
   .section-title-searchBox button {
     width: fit-content;
     padding: 0 15px;
+    border-radius: 12px;
+    height: 40px;
   }
-
+  .boldText:hover{
+ box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.25);;
+  }
   .main-container {
     display: flex;
     flex-direction: column;
